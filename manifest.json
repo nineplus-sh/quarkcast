@@ -1,0 +1,35 @@
+{
+  "name": "Quarkcast",
+  "description": "Display your web activity on Lightquark",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "icons": {
+    "128": "quarkcast.png"
+  },
+  "permissions": [
+    "scripting", "storage"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "quarkcast.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["atoms/*.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

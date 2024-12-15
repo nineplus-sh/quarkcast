@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Quarkcast</h1>
+        <div id="loginarea" class="hidden view">
+            <p>Welcome to Quarkcast. Please enter your LQ details.</p>
+            <form id="login">
+                <input id="baseuri" type="text" placeholder="baseuri" value="https://lightquark.network">
+                <input id="email" type="email" placeholder="email">
+                <input id="password" type="password" placeholder="password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div id="nocompat" class="hidden view">
+            <p>Quarkcast doesn't support this site.</p>
+        </div>
+        <div id="casting" class="hidden view">
+            <p>Quarkcast is quarkcasting.</p>
+            <div id="castdata"></div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
